@@ -1,12 +1,24 @@
-import Avatar from '../components/avatar'
-import DateFormatter from '../components/date-formatter'
-import CoverImage from '../components/cover-image'
-import PostTitle from '../components/post-title'
+import Avatar from "../components/avatar";
+import DateFormatter from "../components/date-formatter";
+import CoverImage from "../components/cover-image";
+import PostTitle from "../components/post-title";
 
 export default function PostHeader({ title, coverImage, date, author }) {
   return (
-    <>
-      <PostTitle>{title}</PostTitle>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        borderTop: "1px solid #8ADDFF",
+        borderBottom: "1px solid #8ADDFF",
+        padding: "2rem 0",
+        width: 
+      }}
+    >
+      <text style={{ fontSize: "3rem", fontWeight: "bold" }}>{title}</text>
+      <DateFormatter dateString={date} />
+
+      {/* <PostTitle>{title}</PostTitle>
       <div className="hidden md:block md:mb-12">
         <Avatar name={author.name} picture={author.picture} />
       </div>
@@ -20,7 +32,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
         <div className="mb-6 text-lg">
           <DateFormatter dateString={date} />
         </div>
-      </div>
-    </>
-  )
+      </div> */}
+    </div>
+  );
 }

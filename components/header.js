@@ -1,12 +1,38 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Header() {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-      <Link href="/">
-        <a className="hover:underline">Blog</a>
-      </Link>
-      .
-    </h2>
-  )
+    <div
+      style={{
+        width: "100%" /* 가로 전체 영역 */,
+        height: "80px",
+        // backgroundColor: "#252525",
+        display: "flex",
+        justifyContent: "center",
+        padding: "1rem",
+      }}
+    >
+      <div
+        style={{
+          width: "600px",
+          height: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          // backgroundColor: "pink",
+        }}
+      >
+        <h2>
+          <Link href="/">
+            <a
+              style={{ color: "#8ADDFF", fontWeight: "bold", fontSize: "2rem" }}
+            >
+              woody.blog
+            </a>
+          </Link>
+        </h2>
+        {/* <h2>hh</h2> */}
+      </div>
+    </div>
+  );
 }
