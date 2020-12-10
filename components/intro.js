@@ -32,7 +32,7 @@ export default function Intro() {
           justifyContent: "center",
         }}
       >
-        <text style={{ fontSize: 20, fontWeight: "bold" }}>woody</text>
+        <p style={{ fontSize: 20, fontWeight: "bold" }}>woody</p>
         <p>안녕하세요. 개발자 우디입니다.</p>
       </div>
     </section>

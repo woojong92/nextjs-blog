@@ -14,7 +14,7 @@ export default function Header() {
     >
       <div
         style={{
-          width: "600px",
+          width: "680px",
           height: "100%",
           display: "flex",
           justifyContent: "space-between",

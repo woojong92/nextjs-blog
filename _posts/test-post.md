@@ -8,6 +8,7 @@ author:
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
+tags: ["tag1", "tag2", "tag3"]
 ---
 
 안녕하세요. 개발자 우디입니다. 포스트를 테스트 합니다
@@ -22,9 +23,17 @@ ogImage:
 
 - 목록
 - 목록
-  - 목록의 목록
+- 목록의 목록
+
+1. hello
+2. world
 
 > ㅁㄴㅇㄹㅁㄴㅇ리ㅏㅓ미날어
+
+```js
+console.log(hello world)
+function helloworld () { console.log('hello world'); console.log('hello world');  console.log('hello world');  console.log('hello world');   }
+```
 
 ## Lorem Ipsum
 

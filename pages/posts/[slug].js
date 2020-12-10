@@ -10,9 +10,13 @@ import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
+import { useEffect } from "react";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
+  useEffect(() => {
+    console.log(post?.tags);
+  }, [])
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -23,7 +27,7 @@ export default function Post({ post, morePosts, preview }) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
+            <article >
               <Head>
                 <title>
                   {post.title} | Next.js Blog Example with {CMS_NAME}
@@ -35,6 +39,7 @@ export default function Post({ post, morePosts, preview }) {
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
+                tags={post.tags}
               />
               <PostBody content={post.content} />
             </article>
@@ -54,6 +59,7 @@ export async function getStaticProps({ params }) {
     "content",
     "ogImage",
     "coverImage",
+    "tags",
   ]);
   const content = await markdownToHtml(post.content || "");
 

@@ -3,7 +3,7 @@ import DateFormatter from "../components/date-formatter";
 import CoverImage from "../components/cover-image";
 import PostTitle from "../components/post-title";
 
-export default function PostHeader({ title, coverImage, date, author }) {
+export default function PostHeader({ title, coverImage, date, author, tags }) {
   return (
     <div
       style={{
@@ -12,11 +12,16 @@ export default function PostHeader({ title, coverImage, date, author }) {
         borderTop: "1px solid #8ADDFF",
         borderBottom: "1px solid #8ADDFF",
         padding: "2rem 0",
-        width: 
       }}
     >
-      <text style={{ fontSize: "3rem", fontWeight: "bold" }}>{title}</text>
+      <p style={{ fontSize: "3rem", fontWeight: "bold" }}>{title}</p>
       <DateFormatter dateString={date} />
+
+      <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row', }}>
+
+      { tags && tags.map( (m, i) => <div key={i} style={{backgroundColor: '#555555', color: '#eee', padding: '0.2rem 0.5rem', marginRight: '1rem', borderRadius: 10}}>{m}</div>)}
+      </div>
+      
 
       {/* <PostTitle>{title}</PostTitle>
       <div className="hidden md:block md:mb-12">

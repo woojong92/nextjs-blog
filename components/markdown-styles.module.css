@@ -2,11 +2,45 @@
   @apply text-lg leading-relaxed;
 }
 
-.markdown p,
-.markdown ul,
-.markdown ol,
+.markdown p {
+  @apply my-6;
+}
+.markdown ul {
+  @apply my-6;
+  padding-left: 2rem;
+  list-style: disc;
+}
+.markdown ol {
+  @apply my-6;
+  padding-left: 2rem;
+  list-style: decimal;
+}
+
+.markdown li {
+  /* list-style: disc; */
+}
+
+.markdown pre {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.markdown code {
+  color: #555555;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 1rem;
+}
+
 .markdown blockquote {
   @apply my-6;
+
+  /* border: 1px solid #27a9e3; */
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-left: 5px solid #cccccc;
 }
 
 .markdown h2 {
